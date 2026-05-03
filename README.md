@@ -3,7 +3,7 @@
 
 > $800B in grants go unclaimed every year. GrantAI fixes that.
 
-![GrantAI Hero](screenshots/dashboard-hero.jpg)
+<img width="1919" height="802" alt="image" src="https://github.com/user-attachments/assets/bdd72253-33e1-41df-aa6d-ef91a42e5a18" />
 
 ---
 
@@ -123,9 +123,6 @@ One sentence → Claude matches against the full grants database → ranks by fi
 
 ### Ask Claude Chat
 A floating assistant on every authenticated page. Each message is sent with the user's full profile + top 5 matched grants as context, so Claude's answers reference specific grant names, deadlines, and fit reasoning. Responses stream token-by-token with a typewriter effect.
-
-### Battle Mode
-Pick two grants and Claude writes a structured verdict — assessing strategic fit, competition level, timeline, and upside — then declares a winner with animated VS particles.
 
 ---
 

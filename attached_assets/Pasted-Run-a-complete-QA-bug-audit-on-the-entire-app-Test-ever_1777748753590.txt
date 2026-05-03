@@ -1,0 +1,100 @@
+Run a complete QA bug audit on the entire app. Test every flow end-to-end 
+and fix ALL bugs you find. Be thorough — this is for a hackathon demo and 
+nothing can break.
+
+CRITICAL CHECKS:
+
+1. LANDING PAGE
+- Does the particle network animation render without lag?
+- Do all CTA buttons (Start for free, See Magic Mode live, Get Started) 
+  navigate correctly?
+- Are there any console errors on page load?
+- Does the page render correctly on mobile viewport (375px width)?
+
+2. ONBOARDING FLOW (5-step wizard)
+- Can you progress through all 5 steps without errors?
+- Do form validations work (required fields show errors)?
+- Does the progress bar update correctly?
+- Does Back button work on every step?
+- Does final submission successfully call the AI matching endpoint?
+- What happens if a user submits with empty fields?
+
+3. AI MATCHING / DASHBOARD
+- After onboarding, does the AI thinking animation play smoothly?
+- Are real Claude responses returned (not mocked data)?
+- Do all 12+ grant cards render with correct data?
+- Do the win probability gauges animate from 0% to target?
+- Does the Grant Universe heatmap render and are tooltips working?
+- Does the Deadline Pressure Cooker show with correct countdown?
+- Does "Refresh Matches" button actually refetch?
+
+4. GRANT DETAIL PAGE
+- Does each grant detail page load with full data?
+- Is the AI Match Analysis sidebar showing personalized reasoning?
+- Does "Start Application" navigate correctly?
+- Does "Visit Website" handle missing URLs gracefully?
+
+5. APPLICATION WORKSPACE
+- Does the AI streaming draft generation work without freezing?
+- Does the typewriter effect look smooth?
+- Can you select text and trigger the rewrite floating toolbar?
+- Do all 5 rewrite styles work (More Compelling, etc.)?
+- Does the inline replacement actually update the text?
+- Is the draft saved to the database?
+
+6. MAGIC MODE
+- Does the modal open from the dashboard button?
+- Does the multi-step animation play correctly?
+- Does Claude actually return matches, or is it static?
+- Does the "Save to dashboard" CTA work?
+
+7. BATTLE MODE
+- Can you select 2-3 grants and start a battle?
+- Do the pros/cons render from Claude?
+- Does the verdict show?
+- Are animations smooth?
+
+8. PITCH PERFECT
+- Does the "Test Your Pitch" modal open?
+- Does microphone access work? Does typing fallback work?
+- Does the radar chart render correctly?
+- Does Claude return all 5 scores?
+- Are the improvement suggestions personalized?
+- Does the copy button work?
+
+9. CONFETTI + SOUNDS
+- Does confetti fire on application generation?
+- Do sounds play (and not loop infinitely)?
+- Does the mute toggle persist across navigations?
+
+10. ERROR HANDLING
+- What happens if Claude API fails or times out?
+- Add proper try-catch with user-friendly error messages
+- Add a fallback UI for empty states (no grants, no applications)
+- Add retry buttons where appropriate
+
+11. PERFORMANCE
+- Are there any memory leaks (animations not cleaning up)?
+- Do API calls have loading states?
+- Are large lists virtualized?
+
+12. MOBILE RESPONSIVENESS
+- Test landing, dashboard, grant detail, and application workspace 
+  at 375px (iPhone SE) and 768px (iPad)
+- Fix any horizontal scroll issues
+- Ensure modals are scrollable on small screens
+- Touch targets should be at least 44px
+
+13. ACCESSIBILITY
+- Add aria-labels to icon buttons
+- Ensure keyboard navigation works (tab through forms)
+- Color contrast should meet WCAG AA
+
+For each bug found, fix it immediately. After all fixes, give me a 
+summary report listing:
+- Total bugs found
+- What was fixed
+- Any remaining limitations or known issues
+- Confirmation that all flows work end-to-end
+
+Test as thoroughly as you can and don't skip anything.

@@ -1,0 +1,55 @@
+Major design refinement pass. The dashboard looks cluttered and 
+inconsistent. Make it look like a premium SaaS product (think Linear, 
+Notion, Vercel dashboards).
+
+DASHBOARD HEADER:
+1. Move all action buttons (Test Your Pitch, Battle Grants, Magic Mode, 
+   Refresh, Mute) into ONE clean horizontal row
+2. Use consistent button sizing and styling — all should be the same 
+   height and use subtle borders, not loud gradient backgrounds
+3. Primary action (Magic Mode) gets a solid emerald accent, all others 
+   are ghost/outline buttons with subtle hover states
+4. Mute should be a small icon button, not a full button
+5. Add proper spacing — at least 32px between header and content below
+
+DEADLINE PRESSURE COOKER WIDGET:
+1. It's WAY too large — reduce to 1/3 current height
+2. Only show if there's actually an urgent deadline (under 30 days)
+3. If countdown is 00:00:00:00 (no real deadline), hide it entirely
+4. Use a subtle red border instead of full red background
+5. Make countdown numbers smaller and tighter
+
+OVERALL DASHBOARD:
+1. Reduce overall visual noise — remove unnecessary glows and gradients
+2. Use a consistent 8px / 16px / 24px / 32px spacing system
+3. Cards should have consistent padding (24px)
+4. All borders should be subtle (rgba white at 8% opacity)
+5. Background should be uniform deep navy (#0A0E1A or similar), 
+   no competing gradients
+6. Typography hierarchy: Big bold heading, smaller subheading, 
+   body text — clear scale
+
+GRANT CARDS:
+1. Keep the fit score badge style (it's good!)
+2. Make all cards equal height
+3. Reduce shadow intensity
+4. Hover state: subtle lift + slight border highlight, not dramatic glow
+
+COLOR PALETTE — STRICTLY USE:
+- Background: #0A0E1A (deep navy)
+- Card background: #131826 (slightly lighter)
+- Primary accent: #10B981 (emerald)
+- Secondary accent: #3B82F6 (blue)
+- Text primary: #F8FAFC
+- Text secondary: #94A3B8
+- Border: rgba(255,255,255,0.08)
+- DO NOT use: purple, yellow, cyan, or any other accent colors
+- The only exception: keep the gradient on "Your AI Grant Officer" 
+  hero text on the landing page
+
+GOAL: Make it look like a $200/month enterprise SaaS, not a hackathon 
+project. Remove anything that feels "extra" or "trying too hard." 
+Less is more.
+
+Apply these same principles to ALL pages: landing, onboarding, 
+grant detail, application workspace, battle mode, pitch perfect.

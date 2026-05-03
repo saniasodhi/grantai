@@ -1,0 +1,63 @@
+Add a major new feature called "📸 Quick Start with Vision" — 
+multimodal AI onboarding using Claude's vision capabilities.
+
+LOCATION: 
+- Add a prominent button "📸 Try Vision Onboarding" on the landing page 
+  next to the existing "Start for free" button
+- Also accessible from a banner on the dashboard for existing users
+
+USER FLOW:
+1. User clicks the button → beautiful modal opens with two options:
+   a) "Upload an image" (drag-drop zone with animated dashed border)
+   b) "Paste an image URL" (input field)
+
+2. Acceptable images: their nonprofit's website screenshot, a flyer, 
+   their team photo, their logo, a photo of their work in the field
+
+3. After upload, show a 3-stage animated analysis:
+   Stage 1: "🔍 Analyzing visual elements..." (1.5s)
+   Stage 2: "🧠 Understanding your mission..." (1.5s)  
+   Stage 3: "✨ Building your profile..." (1.5s)
+   
+   While analyzing, show the uploaded image with a subtle pulsing 
+   border and Claude's "observations" appearing as bullet points 
+   one-by-one with typewriter effect:
+   - "I see a logo featuring..."
+   - "The color palette suggests..."
+   - "This appears to focus on..."
+   - "The imagery indicates work in..."
+
+4. Use Claude's vision API (claude-sonnet-4-20250514) with this prompt:
+   "You are analyzing an image to understand a nonprofit organization. 
+   Output JSON with: org_name (best guess), org_type, mission_statement 
+   (1 sentence), location, focus_areas (array of 3-5), funding_needed 
+   (estimate), and visual_observations (array of 4 specific things you 
+   noticed). Be specific and confident."
+
+5. Auto-populate the user profile with extracted data and show a 
+   confirmation screen: "We built your profile from your image! 
+   Review and edit:" with editable fields
+
+6. Click "Confirm & Find Grants" → triggers the existing matching flow
+   with confetti burst and sound
+
+DESIGN:
+- Glassmorphism modal with deep blue gradient background
+- The drag-drop zone has an animated gradient border when dragging
+- Image preview with subtle parallax effect
+- Smooth transitions between stages using framer-motion
+- Make the "observations" feel alive and intelligent
+
+ALSO ADD TO SHOWCASE:
+Add 3 example images on the /showcase page that judges can click to 
+trigger Vision Mode instantly without uploading:
+- A nonprofit logo (use a stylized SVG of a girl coding)
+- A team photo (use a stock Unsplash image of diverse women in tech)
+- A field work photo (use Unsplash image of education/teaching)
+
+Use the Replit AI proxy for the Claude vision API calls. Handle errors 
+gracefully — if image analysis fails, show a friendly fallback message 
+suggesting manual onboarding.
+
+Make this the most magical moment in the app. Judges should be amazed 
+when they see Claude "read" an image and build a profile from it.

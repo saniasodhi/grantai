@@ -1,0 +1,50 @@
+Major upgrade. Add ALL of these dramatic visual features:
+
+1. ANIMATED HERO BACKGROUND (Landing Page)
+Replace the plain dark landing page background with an animated 
+particle network using HTML5 canvas — floating connected dots in 
+electric blue and emerald that respond to mouse movement. Add a 
+slow gradient mesh overlay that shifts colors slowly. The hero 
+text "Your AI Grant Officer" should have a subtle glow effect and 
+the gradient should animate slowly through blues and greens.
+
+2. 3D ANIMATED GRANT CARDS  
+On the dashboard, transform grant cards into 3D tilting cards using 
+CSS perspective and mouse tracking (like Apple's product cards). On 
+hover: card lifts up, has a subtle parallax glow effect, and the 
+fit score percentage animates count-up from 0. Use vanilla-tilt.js 
+or build it custom.
+
+3. AI THINKING ANIMATION
+When Claude is analyzing grants, show a stunning fullscreen overlay with:
+- A central pulsing orb with concentric rings expanding outward
+- Floating text fragments showing what Claude is "thinking" about
+  (e.g., "Analyzing mission alignment...", "Cross-referencing 
+  eligibility...", "Calculating impact potential...")
+- A neural-network style animation with nodes lighting up
+- Terminal-style typing effect showing real progress
+This must look like a sci-fi movie. Inspiration: Arc Browser's 
+loading states, Linear's launch animations.
+
+4. WIN PROBABILITY GAUGES (Animated)
+Replace boring percentage text with circular SVG gauges that animate 
+filling up on load. Color shifts from red (low) → yellow (medium) 
+→ green (high). Add a subtle pulsing glow when the gauge is over 80%.
+
+5. GRANT SUCCESS HEATMAP
+Add a new section on dashboard: "Your Grant Universe" — a beautiful 
+visual heatmap where each grant is a glowing dot positioned by 
+fit score (x-axis) vs amount (y-axis). Bigger dots = larger amounts. 
+Color intensity = win probability. Hover any dot to see grant info 
+in a floating tooltip. Click to navigate to detail page. Use D3.js 
+or recharts.
+
+6. CONFETTI + SOUND on key actions
+- Confetti burst when application is generated
+- Subtle "ding" sound when match is found  
+- Whoosh sound on page transitions
+- Toggleable in settings
+
+Use framer-motion for animations, canvas-confetti for confetti, 
+howler.js for sounds. Make this the most beautiful AI app the 
+judges have ever seen.

@@ -1,0 +1,68 @@
+Two changes:
+
+CHANGE 1: Rename "Magic Mode" to "Autopilot" everywhere in the app.
+- Update all UI text, button labels, page titles, route names if needed
+- Keep all functionality identical
+- Update the icon: change ✨ to 🎯
+- Update tagline from "AI grant discovery in seconds" to 
+  "AI does the discovery for you"
+
+CHANGE 2: Add a major new feature called "Ask Claude" — an AI chat 
+assistant that lives in every authenticated page.
+
+LOCATION:
+- Floating chat button in bottom-right corner of dashboard, grant 
+  detail page, and application workspace
+- Button: circular, emerald gradient, with subtle pulse animation
+- Icon: chat bubble with sparkle, label "Ask Claude" appears on hover
+
+WHEN CLICKED:
+- Slides up a beautifully designed chat panel (400px wide, 600px tall)
+- Header: "Ask Claude" with close button and a "Clear chat" link
+- Glassmorphism background, dark navy with subtle border
+- Message area with scroll
+- Input at bottom with send button, supports Enter to send
+
+CHAT BEHAVIOR:
+- First message from Claude: "Hi! I'm your AI grant officer. Ask me 
+  anything about your matches, applications, or strategy."
+- Below the welcome message, show 4 clickable suggestion chips:
+  - "Which grant should I prioritize?"
+  - "Improve my application opening"
+  - "What's my strongest match and why?"
+  - "Help me plan this week's applications"
+- Clicking a chip auto-sends that message
+
+CLAUDE INTEGRATION:
+- Use claude-sonnet-4-20250514 with streaming
+- System prompt: "You are an expert grant officer with 20 years of 
+  experience helping nonprofits win funding. You have access to the 
+  user's profile (org name, type, mission, location, focus areas) 
+  and their matched grants with fit scores and reasoning. Be concise, 
+  actionable, and warm. Use bullet points for clarity. Reference 
+  specific grants by name when relevant."
+- Pass the user's profile + top 5 matched grants as context with each 
+  message
+- Stream responses with typewriter effect
+- Include the conversation history for context
+
+STYLE:
+- Claude's messages: left-aligned, glass card with subtle blue border
+- User's messages: right-aligned, emerald background
+- Loading state: 3 animated dots while Claude is thinking
+- Markdown rendering for bullet points and bold text
+- Smooth animations using framer-motion
+
+PERSISTENCE:
+- Store chat history in browser localStorage so it survives refreshes
+- "Clear chat" wipes localStorage and resets
+
+ERROR HANDLING:
+- If API fails, show: "I'm having trouble connecting. Try again in a 
+  moment."
+- Add retry button on failed messages
+
+Make this feel like a premium AI assistant — think Linear's AI, 
+Notion AI, or Cursor's chat. Not a clunky chatbot.
+
+Test thoroughly. Don't break any existing functionality.
